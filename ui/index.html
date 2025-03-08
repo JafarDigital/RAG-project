@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG AI Interface</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="static/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>RAG AI Interface</h1>
+        
+        <div class="input-section">
+            <label for="context" class="block-label">📄 Paste Your Context:</label>
+            <textarea id="context" placeholder="Paste relevant text here..."></textarea>
+            <div class="token-counter"><p id="token-count">🔢 Tokens Used: 0 / 32768 tokens remaining</p></div>
+        </div>
+        
+        <div class="question-section">
+            <label for="question">❓ Ask a Question:</label>
+            <input type="text" id="question" placeholder="Enter your question...">
+            <button id="submit-all">Ask AI</button>
+        </div>
+        
+		<div id="results-section" class="hidden">
+			<h3>AI Response:</h3>
+			<div id="ai-response"></div>
+		</div>
+
+    </div>

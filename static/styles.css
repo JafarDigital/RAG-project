@@ -1,0 +1,91 @@
+/* Minimalist styles for RAG AI Assistant */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+a, h1 {
+    color: #333;
+	text-decoration:none;
+}
+
+textarea {
+    width: 100%; /* Make it match the container width */
+    height: 120px; /* Adjust height for readability */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.block-label {
+    display: block; /* Forces label onto a new line */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.token-counter {
+    font-size: 14px;
+    color: gray;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.upload-section, .question-section {
+    margin: 20px 0;
+}
+
+input[type="file"], input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.results-section {
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    max-height: none; /* Remove height restrictions */
+    white-space: pre-wrap; /* Ensures text wraps properly */
+    overflow: visible; /* Prevents text from being cut off */
+    word-wrap: break-word; /* Ensures words wrap within container */
+}
+
+.hidden {
+    display: none;
+}
+
+#retrieved-passages, #ai-response {
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
