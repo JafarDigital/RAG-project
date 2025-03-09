@@ -20,7 +20,6 @@ Upload text, retrieve relevant passages, and ask AI questions with Mistral-power
     pip install -r requirements.txt
 4. Running the App
     uvicorn app.main:app --host 0.0.0.0 --port 8000
-5. You can now access your chat app via the web browser. To access from another device, replace localhost with your machine's local IP address.
 
 ## Technologies Used
 FastAPI – Lightweight Python API
