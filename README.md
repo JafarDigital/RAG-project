@@ -23,9 +23,9 @@ Upload text, retrieve relevant passages, and ask AI questions with Mistral-power
 5. You can now access your chat app via the web browser. To access from another device, replace localhost with your machine's local IP address.
 
 ## Technologies Used
-FastAPI, 
-WebSockets, 
-SQLite, 
-SQLAlchemy, 
-Tailwind CSS (via CDN), 
-yaml
+FastAPI – Lightweight Python API
+Mistral API – AI model
+TF-IDF (Scikit-Learn) – Retrieves relevant text
+Jinja2 & JavaScript – Frontend for UI
+SlowAPI – Rate limiting (prevents spam)
+HTML, CSS
