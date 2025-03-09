@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+jinja2
+requests
+pydantic
+slowapi
+nltk
+scikit-learn
+numpy
+chardet
