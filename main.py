@@ -12,7 +12,6 @@ from nltk.tokenize import sent_tokenize
 import requests
 import re
 
-# ================= INITIALIZATION ================= #
 app = FastAPI()
 
 # Configure static files and templates
@@ -31,12 +30,11 @@ MISTRAL_API_KEY = "your_mistral_api_key"  # Replace with actual API key
 MISTRAL_API_URL = "https://api.mistral.ai/v1/chat/completions"
 MAX_TOKENS = 32768  # Model limit
 
-# ================= FRONTEND ROUTE ================= #
 @app.get("/", response_class=HTMLResponse)
 async def serve_frontend(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
-# ================= CONTEXT SUBMISSION ================= #
+# Submitting Context
 class ContextInput(BaseModel):
     context: str
 
@@ -46,7 +44,7 @@ async def submit_context(context_input: ContextInput):
     documents = [context_input.context]
     return {"status": "Context updated successfully"}
 
-# ================= ASK QUESTION ================= #
+# Asking a question
 class QuestionRequest(BaseModel):
     question: str
     context: str = None  # Optional
@@ -59,7 +57,6 @@ async def ask_question(request: QuestionRequest):
     ai_response = send_to_mistral(question, context)
     return {"answer": ai_response}
 
-# ================= MISTRAL AI REQUEST ================= #
 def send_to_mistral(question, context):
     payload = {
         "model": "mistral-tiny",  # Free-tier model (try "mistral-7b" if available)
@@ -87,7 +84,7 @@ def send_to_mistral(question, context):
     except Exception as e:
         return f"API Connection Error: {str(e)}"
 
-# ================= DOCUMENT RETRIEVAL (RAG) ================= #
+# Document retrieval
 nltk.download("punkt")
 
 def get_relevant_passages(query, top_n=3, window_size=3):
