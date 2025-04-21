@@ -18,13 +18,13 @@ Upload text, retrieve relevant passages, and ask AI questions with Mistral-power
 2. Create a virtual environment and activate it.
 3. Install dependencies in requirements.txt:
     pip install -r requirements.txt
-4. Running the App
+4. Running the App: 
     uvicorn app.main:app --host 0.0.0.0 --port 8000
 
 ## Technologies Used
-FastAPI – Lightweight Python API
-Mistral API – AI model
-TF-IDF (Scikit-Learn) – Retrieves relevant text
-Jinja2 & JavaScript – Frontend for UI
-SlowAPI – Rate limiting (prevents spam)
-HTML, CSS
+- FastAPI – Lightweight Python API
+- Mistral API – AI model
+- TF-IDF (Scikit-Learn) – Retrieves relevant text
+- Jinja2 & JavaScript – Frontend for UI
+- SlowAPI – Rate limiting (prevents spam)
+- HTML, CSS
